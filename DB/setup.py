@@ -1,7 +1,7 @@
-#! /usr/bin/env python3
+##! /usr/bin/env python3
 
-from data import schema, seed
+from data.schema import schema
+from data.seed import seed
 
-schema.schema()
-seed.seed()
-
+schema()
+seed()

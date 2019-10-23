@@ -1,11 +1,11 @@
-#! /usr/bin/python3
-
-from app.todoitem import TodoItem
-from app import controller
 import os
+from app.orm import ORM
+from app import controller
 
 DIR = os.path.dirname(__file__)
-DBPATH = os.path.join(DIR, "data", "todo.db")
+DBFILENAME = 'sqapp.db'
+DBPATH = os.path.join(DIR, 'data', DBFILENAME)
 
-TodoItem.dbpath = DBPATH
+# child classes default to ORM'm dbpath if it is not set
+ORM.dbpath = DBPATH
 controller.run()

@@ -2,7 +2,7 @@ import sqlite3
 import os
 
 DIR = os.path.dirname(__file__)
-DBFILENAME = "GroveSquash.db"
+DBFILENAME = "sqapp.db"
 DBPATH = os.path.join(DIR, DBFILENAME)
 
 
@@ -19,7 +19,7 @@ def schema(dbpath=DBPATH):
             password_hash VARCHAR(128),
             first_name VARCHAR(15) NOT NULL,
             last_name VARCHAR(15) NOT NULL,
-            phone_1 VARCHAR(15) NOT NULL,
+            phone_1 VARCHAR(15),
             phone_2 VARCHAR(15),
             membership_type NOT NULL,
             membership_fee,
@@ -30,6 +30,7 @@ def schema(dbpath=DBPATH):
 
         cur.execute(DROPSQL.format(tablename="comps"))
 
+        # Think we'll need a date for Comp also, to sort listbox via
         SQL = """CREATE TABLE comps(
             comp_id INTEGER NOT NULL,
             comp_name VARCHAR(100) NOT NULL,
