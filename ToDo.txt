@@ -1,0 +1,9 @@
+* Produce wireframes (still a couple of pages to do) - https://wireframe.cc/ejS3lk
+* Write backup notes for wireframes - not started
+* Scope out routes in Controller - in progress ***
+* Derive SQL for routes - in pseudo code file
+* Start Python app - in progress
+* Write some Python tests - not started
+* Derive basic structure of REACT framework model - not started ***
+* Transition backend into another DB product - look into but don’t start yet
+* Firm up REACT model, what components do you want, what do you want to store in state - not started
